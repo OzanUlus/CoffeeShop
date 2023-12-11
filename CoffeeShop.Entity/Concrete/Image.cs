@@ -10,5 +10,14 @@ namespace CoffeeShop.Entity.Concrete
     public class Image : BaseEntity
     {
         public string ImageURL { get; set; }
+
+
+        #region Nav pro and FK
+
+        public Coffee Coffee { get; set; }
+        public Cake Cake { get; set; }
+        public Cookie Cookie { get; set; }
+
+        #endregion
     }
 }
