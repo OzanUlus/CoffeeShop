@@ -11,5 +11,11 @@ namespace CoffeeShop.Entity.Concrete
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
+
+
+        #region Nav pro and FK
+        public OrderLine OrderLine { get; set; }
+        public string OrderLineId { get; set; }
+        #endregion
     }
 }

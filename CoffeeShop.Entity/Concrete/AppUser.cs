@@ -14,5 +14,9 @@ namespace CoffeeShop.Entity.Concrete
         public Cities City { get; set; }
         public string County { get; set; }
         public string Address { get; set; }
+
+        #region Nav pro and FK
+        public virtual ICollection<OrderLine> OrderLines { get; set; }
+        #endregion
     }
 }
