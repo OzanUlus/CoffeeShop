@@ -9,6 +9,10 @@ namespace CoffeeShop.Entity.Concrete
 {
     public class Image : BaseEntity
     {
+        public Image()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
         public string ImageURL { get; set; }
 
 

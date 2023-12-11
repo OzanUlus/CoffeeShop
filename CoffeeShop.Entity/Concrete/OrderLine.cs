@@ -4,11 +4,15 @@ namespace CoffeeShop.Entity.Concrete
 {
     public class OrderLine : BaseEntity
     {
-     
+        public OrderLine()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+
         public int Quantity { get; set; }
         public decimal Price { get; set; }
 
-        //ürünler nav prop olarak eklenecek
+        
         #region Nav pro and FK
         public virtual Order Order { get; set; }
         public string OrderId { get; set; }

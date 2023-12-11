@@ -10,7 +10,11 @@ namespace CoffeeShop.Entity.Concrete
 {
     public class Order : BaseEntity
     {
-        
+        public Order()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+
         public string OrderNumber { get; set; }
         public decimal TotalPrice { get; set; }
         public DateTime OrderDate { get; set; }

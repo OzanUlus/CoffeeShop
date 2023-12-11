@@ -9,6 +9,10 @@ namespace CoffeeShop.Entity.Concrete
 {
     public class Coffee : BaseEntity
     {
+        public Coffee()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
         public string Name { get; set; }
         public string Describe { get; set; }
 
@@ -22,4 +26,4 @@ namespace CoffeeShop.Entity.Concrete
         #endregion
     }
 }
-}
+

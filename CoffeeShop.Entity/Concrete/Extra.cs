@@ -9,6 +9,10 @@ namespace CoffeeShop.Entity.Concrete
 {
     public class Extra : BaseEntity
     {
+        public Extra()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
         public string Name { get; set; }
         public decimal Price { get; set; }
 
