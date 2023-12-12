@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CoffeeShop.BLL\CoffeeShop.BLL.csproj" />
+    <ProjectReference Include="..\CoffeeShop.DTOs\CoffeeShop.DTOs.csproj" />
+  </ItemGroup>
+
 </Project>
