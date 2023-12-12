@@ -23,6 +23,8 @@ namespace CoffeeShop.Entity.Concrete
 
         public string? ImageId { get; set; }
         public Image Image { get; set; }
+        public Extra Extra { get; set; }
+        public string ExtraId { get; set; }
         #endregion
     }
 }

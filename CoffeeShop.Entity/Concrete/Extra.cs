@@ -20,6 +20,7 @@ namespace CoffeeShop.Entity.Concrete
         #region Nav pro and FK
         public OrderLine OrderLine { get; set; }
         public string OrderLineId { get; set; }
+        ICollection<Coffee>Coffees { get; set; }
         #endregion
     }
 }
