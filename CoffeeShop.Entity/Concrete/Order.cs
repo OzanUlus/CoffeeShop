@@ -13,6 +13,7 @@ namespace CoffeeShop.Entity.Concrete
         public Order()
         {
             Id = Guid.NewGuid().ToString();
+            OrderNumber = Guid.NewGuid().ToString();
         }
 
         public string OrderNumber { get; set; }

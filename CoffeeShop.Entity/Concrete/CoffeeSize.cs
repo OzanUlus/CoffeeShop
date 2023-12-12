@@ -16,6 +16,7 @@ namespace CoffeeShop.Entity.Concrete
         public string Name { get; set; }
         public decimal Price { get; set; }
 
-        public virtual ICollection<OrderLine> OrderLines { get; set; }
+        
+        public virtual ICollection<Coffee> Coffees { get; set; }
     }
 }

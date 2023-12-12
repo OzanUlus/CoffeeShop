@@ -1,4 +1,41 @@
+using CoffeeShop.DAL.Context;
+using CoffeeShop.Entity.Concrete;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon"));
+});
+
+builder.Services.AddIdentity<AppUser, AppRole>(option =>
+{
+    option.User.AllowedUserNameCharacters =
+    "abcçdefgðhiýjklmnoöprsþtuüvyz" +
+    "ABCÇDEFGÐHÝIJKLMNOÖPRSÞTUÜVYZ" +
+    "QWX" + "wqx" + "1234567890";
+
+    option.User.RequireUniqueEmail = true;
+    option.SignIn.RequireConfirmedEmail = true;//ileri true
+    option.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+    option.Lockout.MaxFailedAccessAttempts = 6;
+
+
+    option.Password.RequiredLength = 8;
+    option.Password.RequireNonAlphanumeric = false;
+    option.Password.RequireLowercase = false;
+    option.Password.RequireUppercase = false;
+    option.Password.RequireDigit = true;
+
+
+}).AddDefaultTokenProviders()
+     .AddEntityFrameworkStores<AppDbContext>();
+
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

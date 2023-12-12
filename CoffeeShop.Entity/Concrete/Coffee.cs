@@ -21,10 +21,12 @@ namespace CoffeeShop.Entity.Concrete
         public OrderLine OrderLine { get; set; }
         public string OrderLineId { get; set; }
 
-        public string? ImageId { get; set; }
+        
         public Image Image { get; set; }
         public Extra Extra { get; set; }
         public string ExtraId { get; set; }
+        public CoffeeSize CoffeeSize { get; set; }
+        public string CoffeeSizeId { get; set; }
         #endregion
     }
 }

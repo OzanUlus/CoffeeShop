@@ -22,8 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configutions\" />
-    <Folder Include="Extention\" />
     <Folder Include="Abstract\" />
     <Folder Include="UnitOfWork\" />
     <Folder Include="Repository\" />

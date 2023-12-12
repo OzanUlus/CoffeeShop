@@ -20,15 +20,10 @@ namespace CoffeeShop.Entity.Concrete
         public AppUser AppUser { get; set; }
         public string AppUserId { get; set; }
 
-        public Coffee Coffee { get; set; }
-        public string CoffeeId { get; set; }
-        public Cake Cake { get; set; }
-        public string CakeId { get; set; }
-        public Cookie Cookie { get; set; }
-        public string CookieId { get; set; }
-        public CoffeeSize CoffeeSize { get; set; }
-        public string CoffeeSizeId { get; set; }
-        public virtual ICollection<Extra> Extras { get; set; }
+        public ICollection<Coffee> Coffees { get; set; }
+        public ICollection<Cake> Cakes { get; set; }
+        public ICollection<Cookie> Cookies { get; set; }
+       
         #endregion
 
 
