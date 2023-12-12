@@ -22,7 +22,7 @@ namespace CoffeeShop.Entity.Concrete
 
         public ICollection<Coffee> Coffees { get; set; }
         public ICollection<Cake> Cakes { get; set; }
-        public ICollection<Cookie> Cookies { get; set; }
+        public ICollection<Cooky> Cookies { get; set; }
        
         #endregion
 

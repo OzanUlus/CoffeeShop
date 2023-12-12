@@ -24,7 +24,7 @@ namespace CoffeeShop.DAL.Context
         public DbSet<Cake> Cakes { get; set; }
         public DbSet<Coffee> Coffees { get; set; }
         public DbSet<CoffeeSize> CoffeeSizes { get; set; }
-        public DbSet<Cookie> Cookies { get; set; }
+        public DbSet<Cooky> Cookies { get; set; }
         public DbSet<Extra> Extras { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Order> Orders { get; set; }

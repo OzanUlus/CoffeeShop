@@ -17,6 +17,7 @@ namespace CoffeeShop.DAL.Configutions
            builder.Property(x=>x.Describe).HasMaxLength(250).IsRequired();
 
             builder.HasOne(x => x.OrderLine).WithMany(x=>x.Cakes).HasForeignKey(x=>x.OrderLineId);
+            builder.HasOne(x => x.Image).WithOne(x => x.Cake).HasForeignKey<Cake>(x => x.ImageId);
         }
     }
 }

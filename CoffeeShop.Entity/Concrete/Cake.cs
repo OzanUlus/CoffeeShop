@@ -22,6 +22,7 @@ namespace CoffeeShop.Entity.Concrete
         public string OrderLineId { get; set; }
         
         public Image Image { get; set; }
+        public string ImageId { get; set; }
         #endregion
     }
 }

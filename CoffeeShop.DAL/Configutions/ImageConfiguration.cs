@@ -17,9 +17,7 @@ namespace CoffeeShop.DAL.Configutions
         {
             builder.Property(x => x.ImageURL).IsRequired();
 
-            builder.HasOne(x=>x.Coffee).WithOne(x => x.Image).HasForeignKey<Image>(x=>x.CoffeeId);
-            builder.HasOne(x=>x.Cookie).WithOne(x => x.Image).HasForeignKey<Image>(x=>x.CookieId);
-            builder.HasOne(x=>x.Cake).WithOne(x => x.Image).HasForeignKey<Image>(x=>x.CakeId);
+           
 
           
         }

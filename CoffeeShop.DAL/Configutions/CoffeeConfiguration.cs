@@ -20,6 +20,7 @@ namespace CoffeeShop.DAL.Configutions
             builder.HasOne(x=>x.Extra).WithMany(x=>x.Coffees).HasForeignKey(x=>x.ExtraId);
             builder.HasOne(x=>x.CoffeeSize).WithMany(x=>x.Coffees).HasForeignKey(x=>x.CoffeeSizeId);
             builder.HasOne(x => x.OrderLine).WithMany(x => x.Coffees).HasForeignKey(x => x.OrderLineId);
+            builder.HasOne(x => x.Image).WithOne(x => x.Coffee).HasForeignKey<Coffee>(x => x.ImageId);
         }
     }
 }

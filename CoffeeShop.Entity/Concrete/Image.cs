@@ -19,11 +19,11 @@ namespace CoffeeShop.Entity.Concrete
         #region Nav pro and FK
 
         public Coffee Coffee { get; set; }
-        public string CoffeeId { get; set; }
+        
         public Cake Cake { get; set; }
-        public string CakeId { get; set; }
-        public Cookie Cookie { get; set; }
-        public string CookieId { get; set; }
+        
+        public Cooky Cookie { get; set; }
+        
 
         #endregion
     }
