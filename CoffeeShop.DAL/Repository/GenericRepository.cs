@@ -15,6 +15,12 @@ namespace CoffeeShop.DAL.Repository
     {
         private readonly AppDbContext _appDbContext;
         private readonly DbSet<T> _dbSet;
+        private AppDbContext appDbContext;
+
+        public GenericRepository(AppDbContext appDbContext)
+        {
+            this.appDbContext = appDbContext;
+        }
 
         public GenericRepository(AppDbContext appDbContext, DbSet<T> dbSet)
         {
