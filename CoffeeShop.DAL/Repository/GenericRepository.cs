@@ -31,11 +31,13 @@ namespace CoffeeShop.DAL.Repository
         public async Task AddAsync(T entity)
         {
            await _dbSet.AddAsync(entity);
+            await _appDbContext.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(T entity)
         {
             await Task.Run(() => _dbSet.Remove(entity));
+            await _appDbContext.SaveChangesAsync();
         }
 
       
@@ -108,6 +110,7 @@ namespace CoffeeShop.DAL.Repository
         public async Task UpdateAsync(T entity)
         {
             await Task.Run(() => _dbSet.Update(entity));
+            await _appDbContext.SaveChangesAsync();
         }
     }
 
