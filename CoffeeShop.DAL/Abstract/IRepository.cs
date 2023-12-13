@@ -13,7 +13,7 @@ namespace CoffeeShop.DAL.Abstract
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
-        Task GetAllAsync();
+        Task<List<T>> GetAllAsync();
         Task GetByIdAsync(string id);
         Task<List<T>> GetAllAsync(bool asNoTracking = true, Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[] includeProperties);
         Task<T> GetAsync(bool asNoTracking = true, Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[] includeProperties);
