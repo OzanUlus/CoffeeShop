@@ -1,4 +1,5 @@
-﻿using CoffeeShop.Entity.Concrete;
+﻿using CoffeeShop.DTOs.Base;
+using CoffeeShop.Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.DTOs.Concrete
 {
-    public class OrderLineDTO
+    public class OrderLineDTO : IDTO
     {
         public string Id { get; set; }
         public int Quantity { get; set; }
