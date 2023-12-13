@@ -1,4 +1,7 @@
+using CoffeeShop.DAL.Abstract;
 using CoffeeShop.DAL.Context;
+using CoffeeShop.DAL.Repository;
+using CoffeeShop.DAL.UnitOfWork;
 using CoffeeShop.Entity.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +22,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(option =>
     "QWX" + "wqx" + "1234567890";
 
     option.User.RequireUniqueEmail = true;
-    option.SignIn.RequireConfirmedEmail = true;//ileri true
+    option.SignIn.RequireConfirmedEmail = false;//ileri true
     option.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
     option.Lockout.MaxFailedAccessAttempts = 6;
 
@@ -33,6 +36,15 @@ builder.Services.AddIdentity<AppUser, AppRole>(option =>
 
 }).AddDefaultTokenProviders()
      .AddEntityFrameworkStores<AppDbContext>();
+
+builder.Services.AddScoped<ICakeRepository,CakeRepository>();
+builder.Services.AddScoped<ICoffeeRepository,CoffeeRepository>();
+builder.Services.AddScoped<ICoffeeSizeRepository,CoffeeSizeRepository>();
+builder.Services.AddScoped<ICookyRepository,CookyRepository>();
+builder.Services.AddScoped<IExtraRepository,ExtraRepository>();
+builder.Services.AddScoped<IOrderLineRepository,OrderLineRepository>();
+builder.Services.AddScoped<IOrderRepository,OrderRepository>();
+builder.Services.AddScoped<IUOW, UOW>();
 
 
 
