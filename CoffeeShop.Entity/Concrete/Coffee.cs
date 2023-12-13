@@ -15,6 +15,7 @@ namespace CoffeeShop.Entity.Concrete
         }
         public string Name { get; set; }
         public string Describe { get; set; }
+        public decimal Price { get; set; }
 
 
         #region Nav pro and FK
