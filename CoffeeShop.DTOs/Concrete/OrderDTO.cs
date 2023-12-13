@@ -1,4 +1,5 @@
-﻿using CoffeeShop.Entity.Concrete;
+﻿using CoffeeShop.DTOs.Base;
+using CoffeeShop.Entity.Concrete;
 using CoffeeShop.Entity.Enums;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.DTOs.Concrete
 {
-    public class OrderDTO
+    public class OrderDTO : IDTO
     {
         public string OrderNumber { get; set; }
         public decimal TotalPrice { get; set; }
