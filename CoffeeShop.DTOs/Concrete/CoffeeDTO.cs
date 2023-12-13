@@ -13,5 +13,6 @@ namespace CoffeeShop.DTOs.Concrete
         public string Name { get; set; }
         public string Describe { get; set; }
         public decimal Price { get; set; }
+        public string ImageURL { get; set; }
     }
 }

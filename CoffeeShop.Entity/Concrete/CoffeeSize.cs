@@ -14,7 +14,7 @@ namespace CoffeeShop.Entity.Concrete
             Id = Guid.NewGuid().ToString();
         }
         public string Name { get; set; }
-        public decimal Price { get; set; }
+        public decimal AdditionalPrice { get; set; }
 
         
         public virtual ICollection<Coffee> Coffees { get; set; }

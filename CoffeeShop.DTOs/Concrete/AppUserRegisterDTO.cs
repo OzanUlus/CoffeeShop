@@ -18,6 +18,7 @@ namespace CoffeeShop.DTOs.Concrete
         public string County { get; set; }
         public string Address { get; set; }
         public City City { get; set; }
+        public string ImageURL { get; set; }
     }
     public enum City 
     {

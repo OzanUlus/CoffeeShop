@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.DTOs.Concrete
 {
-    internal class CakeDTO : IDTO
+    public class CakeDTO : IDTO
     {
         public string Id { get; set; }
         public string Name { get; set; }
         public string Describe { get; set; }
         public decimal Price { get; set; }
+        public string ImageURL { get; set; }
     }
 }
